@@ -1,8 +1,16 @@
 // Import dependencies
 import * as React from 'react'
 
-// Import interfaces
-import { TodoItemInterface } from './../interfaces'
+import { TodoInterface } from './../interfaces'
+
+// Todo item interface
+export interface TodoItemInterface {
+  handleTodoUpdate: (event: React.ChangeEvent<HTMLInputElement>, id: string) => void;
+  handleTodoRemove: (id: string) => void;
+  handleTodoComplete: (id: string) => void;
+  handleTodoBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  todo: TodoInterface;
+}
 
 // TodoItem component
 const TodoItem = (props: TodoItemInterface) => {
